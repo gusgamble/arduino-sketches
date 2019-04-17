@@ -192,7 +192,7 @@ void loop() {
   /* Main program loop
    * Based on the current state, run a different function
    */
-  
+
   switch (state) {
   case UNARMED:
     // Wait for a button press to trigger the countdown
@@ -261,7 +261,7 @@ void state_armed() {
       state = INCORRECT;
       return;
      }
-     
+
     }
     tracktime = millis();
     if(tracktime-blinktime>=125 && ledstate == LOW){
@@ -286,10 +286,10 @@ void state_armed() {
       index++;
     }
     else if(key && key == correct_pin[index])
-      index++;  
+      index++;
   }
   state = INCORRECT;
- }      
+ }
 
 void state_unarmed() {
   //TODO implement this state

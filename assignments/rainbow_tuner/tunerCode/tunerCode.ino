@@ -5,11 +5,11 @@
 
 int anPin = 0 ;
 int readVal = 0 ;
- 
+
 int redPin = 9;
 int greenPin = 11 ;
 int bluePin = 10 ;
- 
+
 void setup(){
   Serial.begin(9600) ;
   pinMode( redPin, OUTPUT ) ;
@@ -30,7 +30,7 @@ void loop(){
   else if( readVal >= 342 && readVal <682){
     analogWrite( redPin, 0);
     analogWrite( greenPin, 255);
-    analogWrite( bluePin, 0); 
+    analogWrite( bluePin, 0);
   }
   else if( readVal > 683 ){
       analogWrite( redPin, 0);
@@ -41,5 +41,3 @@ void loop(){
     Serial.println("IMPOSSIBLE CONDITION!!!!") ;
   }
 }
- 
-

@@ -7,7 +7,7 @@ void setup() {
   // put your setup code here, to run once:
   Wire.begin(8);                // join i2c bus with address #8
   Serial.begin(9600);
-  Wire.onRequest(requestEvent); 
+  Wire.onRequest(requestEvent);
   Wire.onReceive(receiveEvent);
   Wire.setTimeout(100000);
 }
@@ -20,7 +20,7 @@ void loop() {
     sLoc = NULL;
     printBoard();
     Serial.println("Where would you like to move: ");
-  
+
     while(Serial.available()==0){
       //block for the serial read
       }
